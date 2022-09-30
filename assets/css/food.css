@@ -11,7 +11,7 @@ html,
 body {
     min-height: 100% !important;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .flex-center {
@@ -26,6 +26,7 @@ img {
 }
 
 .load-wrapp {
+    opacity: 1;
     animation: finishLoad ease-in infinite;
     animation-delay: 7s;
     animation-fill-mode: forwards;
@@ -73,17 +74,17 @@ img {
     animation: loading 0.6s 0.3s linear infinite;
 }
 
-.typing {
+/* .typing {
     position: absolute;
     top: 75%;
     left: -70%;
-    width: 28ch;
-    animation: typing 5s steps(28) infinite, blink .5s step-end infinite alternate;
+    width: 35ch;
+    animation: typing 5s steps(35) infinite, blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     font-family: monospace;
     font-size: 2em;
-}
+} */
 
 .main {
     opacity: 0;
@@ -104,6 +105,22 @@ img {
     overflow-y: visible;
     overflow-x: hidden;
     word-wrap: break-word;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: loaded ease-in infinite;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+nav img {
+    width: 64px;
+    height: 64px;
 }
 
 .background {
