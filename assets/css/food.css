@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: number;
+}
+
+html,
+body {
+    min-height: 100% !important;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 250px;
+    height: 150px;
+}
+
+.load-wrapp {
+    animation: finishLoad ease-in infinite;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 10px 0;
+    padding: 20px 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+
+.line:nth-last-child(1) {
+    background-color: #FFCC00;
+}
+
+.line:nth-last-child(2) {
+    background-color: #CC0001;
+}
+
+.line:nth-last-child(3) {
+    background-color: #010066;
+}
+
+
+.load-3 .line:nth-last-child(1) {
+    animation: loading 0.6s 0.1s linear infinite;
+}
+
+.load-3 .line:nth-last-child(2) {
+    animation: loading 0.6s 0.2s linear infinite;
+}
+
+.load-3 .line:nth-last-child(3) {
+    animation: loading 0.6s 0.3s linear infinite;
+}
+
+.typing {
+    position: absolute;
+    top: 75%;
+    left: -70%;
+    width: 28ch;
+    animation: typing 5s steps(28) infinite, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+.main {
+    opacity: 0;
+    animation: loaded ease-in infinite;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vh;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #010066 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px 15px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+.background {
+    opacity: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-image: url('/assets/images/background_food.jpg');
+    animation: loaded ease-in infinite;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+.top {
+    justify-content: space-around !important;
+}
+
+.ingredients,
+.instructions {
+    padding: 15px 15px;
+}
+
+
+@keyframes loading {
+    0 {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes loaded {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes finishLoad {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
