@@ -27,7 +27,7 @@
 html {
     height: 100vh;
     width: 100vw;
-    background-image: url('/assets/images/background.jpg');
+    background-image: url('assets/images/background.jpg');
     height: 100vh;
     background-position: center;
     background-attachment: fixed;
@@ -80,7 +80,7 @@ html {
 
 .header h3 {
     font-family: 'Pacifico', cursive;
-    background-image: url('/assets/images/flag.gif');
+    background-image: url('assets/images/flag.gif');
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
