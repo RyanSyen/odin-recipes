@@ -128,7 +128,7 @@ nav img {
     position: absolute;
     width: 100vw;
     height: 100%;
-    background-image: url('/assets/images/background_food.jpg');
+    background-image: url('assets/images/background_food.jpg');
     animation: loaded ease-in infinite;
     animation-delay: 7s;
     animation-fill-mode: forwards;
