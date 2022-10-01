@@ -2,13 +2,12 @@
 <html lang="en">
 
 <head>
+    <!-- why nasi lemak is not updated -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- insert favicon  -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/malaysia.png">
     <!-- insert css -->
-    <link rel="stylesheet" href="/assets/css/food.css">
+    <link rel="stylesheet" href="../../odin-recipes/food.css">
+    <!-- insert favicon  -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/malaysia.png">
     <!-- google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +17,30 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Nasi Lemak</title>
+
+    <style>
+        .typing {
+            position: absolute;
+            top: 75%;
+            left: -70%;
+            width: 29ch;
+            animation: typing 5s steps(29) infinite, blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            font-family: monospace;
+            font-size: 2em;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+    </style>
 </head>
+<div class="background"></div>
 
 <body>
-    <div class="background"></div>
     <div class="load-wrapp">
         <div class="load-3">
             <p>Loading</p>
@@ -32,22 +51,22 @@
         <div class="typing">
             <h3>Aunty, nasi lemak satu! </h3>
         </div>
-
     </div>
-
+    <nav>
+        <a href="../index.html"><img src="../assets/images/home.png" alt="home"></a>
+    </nav>
     <div class="main">
-
         <div>
             <div class="top flex-center">
                 <div>
                     <h1>Nasi Lemak</h1>
-                    <button>
-                        <span class="material-symbols-outlined">
-                            print
-                        </span>
+                    <button><a href="https://whattocooktoday.com/wprm_print/recipe/26776" target="_blank"><span
+                                class="material-symbols-outlined">
+                                print
+                            </span></a>
                     </button>
                 </div>
-                <img src="/assets/images/nasi_lemak.jpg" alt="nasi-lemak">
+                <img src="../assets/images/nasi_lemak.jpg" alt="nasi-lemak">
             </div>
         </div>
         <div class="ingredients">
@@ -116,7 +135,6 @@
             </ul>
         </div>
     </div>
-
 </body>
 
 </html>
